@@ -9,6 +9,26 @@
             <sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>
         </sebm-google-map>
 
-
+        <h2>Organiser une rendez-vous !</h2>
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="evtType">Type d'évènement</label>
+                <select class="form-control" id="evtType" [(ngModel)]="evtType" name="evtType">
+                    <option>Dej</option>
+                    <option>Café</option>
+                    <option>Dîner</option>
+                    <option>Pot</option>
+                </select>
+                <label for="name">Intitulé de l'évènement</label>
+                <input type="text" class="form-control" id="name" required [(ngModel)]="name" name="name">
+                <label for="date">Date</label>
+                <input class="form-control" type="date" id="date" [(ngModel)]="date" name="date">
+                <label for="time">Heure</label>
+                <input class="form-control" type="time" id="time" [(ngModel)]="time" name="time">
+                <label for="address">Adresse</label>
+                <input class="form-control" type="text" id="address" [(ngModel)]="address" name="address">
+            </div>
+            <button type="submit" class="btn btn-success">Allez !</button>
+        </form>
     </div>
 </div>

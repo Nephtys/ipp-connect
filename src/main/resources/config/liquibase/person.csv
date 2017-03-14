@@ -1,0 +1,7 @@
+id;username;password;firstname;lastname;organization;latitude;longitude
+1;pmartin;ippon17;Pierre;Martin;Chanel;48.882335;2.266636
+2;cdupont;ippon17;Charlotte;Dupont;Société Générale;48.889321;2.243667
+3;jmichel;ippon17;Jean;Michel;Ippon;48.875372;2.288717
+4;jmarchand;ippon17;Julien;Marchand;GMF;48.892598;2.236112
+5;lespagnol;ippon17;Loic;Espagnol;Groupama; 48.892656;2.233138
+6;varmee;ippon17;Vanessa;Armée;General Electric;48.888792;2.245891
