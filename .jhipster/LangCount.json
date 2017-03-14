@@ -1,0 +1,19 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "language",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nb",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20170314115343",
+    "entityTableName": "lang_count",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

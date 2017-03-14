@@ -232,17 +232,17 @@ alphanum-sort@^1.0.1, alphanum-sort@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/alphanum-sort/-/alphanum-sort-1.0.2.tgz#97a1119649b211ad33691d9f9f486a8ec9fbe0a3"
 
-amdefine@1.0.0:
+amdefine@1.0.0, amdefine@>=0.0.4, amdefine@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.0.tgz#fd17474700cb5cc9c2b709f0be9d23ce3c198c33"
-
-amdefine@>=0.0.4, amdefine@^1.0.0:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
 angular2-cookie@1.2.6:
   version "1.2.6"
   resolved "https://registry.yarnpkg.com/angular2-cookie/-/angular2-cookie-1.2.6.tgz#8fa845531e777adb042fe2f339c0040f6ddbf09d"
+
+angular2-google-maps@^0.17.0:
+  version "0.17.0"
+  resolved "https://registry.yarnpkg.com/angular2-google-maps/-/angular2-google-maps-0.17.0.tgz#ad8366fa4e5c56de0b8b20f003b5f7a1da06ffe3"
 
 angular2-infinite-scroll@0.3.0:
   version "0.3.0"
@@ -5310,17 +5310,9 @@ pngquant-bin@^3.0.0:
     bin-wrapper "^3.0.0"
     logalot "^2.0.0"
 
-portfinder@1.0.9:
+portfinder@1.0.9, portfinder@^1.0.9:
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/portfinder/-/portfinder-1.0.9.tgz#b1ac8755d092afc0433f1c4832fa17d6d1f5d830"
-  dependencies:
-    async "^1.5.2"
-    debug "^2.2.0"
-    mkdirp "0.5.x"
-
-portfinder@^1.0.9:
-  version "1.0.13"
-  resolved "https://registry.yarnpkg.com/portfinder/-/portfinder-1.0.13.tgz#bb32ecd87c27104ae6ee44b5a3ccbf0ebb1aede9"
   dependencies:
     async "^1.5.2"
     debug "^2.2.0"

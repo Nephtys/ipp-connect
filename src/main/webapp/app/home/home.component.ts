@@ -13,6 +13,8 @@ import { Account, LoginModalService, Principal } from '../shared';
 
 })
 export class HomeComponent implements OnInit {
+  lat = 48.875319;
+  lng = 2.28882;
     account: Account;
     modalRef: NgbModalRef;
 
