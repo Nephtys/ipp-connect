@@ -1,0 +1,39 @@
+
+<div *ngIf="appointment">
+    <h2><span>Appointment</span> {{appointment.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span>Title</span></dt>
+        <dd>
+            <span>{{appointment.title}}</span>
+        </dd>
+        <dt><span>Description</span></dt>
+        <dd>
+            <span>{{appointment.description}}</span>
+        </dd>
+        <dt><span>Time</span></dt>
+        <dd>
+            <span>{{appointment.time | date:'medium'}}</span>
+        </dd>
+        <dt><span>Restaurant</span></dt>
+        <dd>
+            <div *ngIf="appointment.restaurant">
+                <a [routerLink]="['/restaurant', appointment.restaurant?.id]">{{appointment.restaurant?.id}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'appointment/'+ appointment.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span> Edit</span>
+    </button>
+</div>
