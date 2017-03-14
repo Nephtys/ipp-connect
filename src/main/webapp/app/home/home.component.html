@@ -4,17 +4,45 @@
     </div>
     <div class="col-md-9">
         <h1 class="display-4">Ipp'Connect</h1>
+        <h2 *ngIf="me">Bienvenue {{me.firstname}}</h2>
 
-        <sebm-google-map [latitude]="lat" [longitude]="lng">
-            <sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>
+        <sebm-google-map
+                [latitude]="lat"
+                [longitude]="lng"
+                [zoom]="zoom"
+                [disableDefaultUI]="false"
+                [zoomControl]="false">
+
+            <sebm-google-map-marker
+                    *ngFor="let m of markers; let i = index"
+                    (markerClick)="clickedMarker(m.label, i)"
+                    [latitude]="m.lat"
+                    [longitude]="m.lng"
+                    [label]="m.label"
+                    [iconUrl]="m.icon">
+
+                <sebm-google-map-info-window>
+                    <strong>InfoWindow content</strong>
+                </sebm-google-map-info-window>
+
+            </sebm-google-map-marker>
+
+            <sebm-google-map-circle [latitude]="lat" [longitude]="lng"
+                                    [radius]="1000"
+                                    [fillColor]="'blue'"
+                                    [circleDraggable]="false"
+                                    [fillOpacity]="0.1"
+                                    [editable]="false">
+            </sebm-google-map-circle>
+
         </sebm-google-map>
 
-        <h2>Organiser une rendez-vous !</h2>
+        <h2>Organiser un rendez-vous !</h2>
         <form (ngSubmit)="onSubmit()">
             <div class="form-group">
                 <label for="evtType">Type d'évènement</label>
                 <select class="form-control" id="evtType" [(ngModel)]="evtType" name="evtType">
-                    <option>Dej</option>
+                    <option selected>Dej</option>
                     <option>Café</option>
                     <option>Dîner</option>
                     <option>Pot</option>
@@ -28,7 +56,7 @@
                 <label for="address">Adresse</label>
                 <input class="form-control" type="text" id="address" [(ngModel)]="address" name="address">
             </div>
-            <button type="submit" class="btn btn-success">Allez !</button>
+            <button type="submit" class="btn btn-primary">Allez !</button>
         </form>
     </div>
 </div>

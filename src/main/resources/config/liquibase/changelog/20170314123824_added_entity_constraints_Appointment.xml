@@ -14,5 +14,11 @@
                                  referencedColumnNames="id"
                                  referencedTableName="restaurant"/>
 
+        <addForeignKeyConstraint baseColumnNames="person_id"
+                                 baseTableName="appointment"
+                                 constraintName="fk_appointment_person_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="person"/>
+
     </changeSet>
 </databaseChangeLog>

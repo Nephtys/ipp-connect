@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-md-3">
+        <span class="hipster img-fluid img-rounded"></span>
+    </div>
+    <div class="col-md-9">
+        <h1 class="display-4">Ipp'Connect</h1>
+        <h2 *ngIf="me">Bienvenue {{me.firstname}}</h2>
+
+        <div *ngIf="appointment">
+            <form>
+                <div class="form-group">
+                    <ul>
+                        <li>{{appointment.title}}</li>
+                        <li>{{appointment.description}}</li>
+                        <li *ngIf="appointment.restaurant">{{appointment.restaurant.name}}</li>
+                        <li>{{appointment.time}}</li>
+
+                        <li>Participants :
+                            <ul>
+                                <li *ngIf="appointment.person">{{appointment.person.firstname}} {{appointment.person.lastname}}</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <input type="submit" class="btn btn-primary" value="Oui"/>
+                <input type="submit" class="btn btn-primary" value="Non"/>
+            </form>
+        </div>
+    </div>
+</div>

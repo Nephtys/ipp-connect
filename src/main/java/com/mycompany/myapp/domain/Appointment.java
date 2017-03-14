@@ -43,6 +43,9 @@ public class Appointment implements Serializable {
     @ManyToOne
     private Restaurant restaurant;
 
+    @ManyToOne
+    private Person person;
+
     public Long getId() {
         return id;
     }
@@ -122,6 +125,14 @@ public class Appointment implements Serializable {
     public Appointment restaurant(Restaurant restaurant) {
         this.restaurant = restaurant;
         return this;
+    }
+
+    public Person getPerson() {
+        return person;
+    }
+
+    public void setPerson(Person person) {
+        this.person = person;
     }
 
     public void setRestaurant(Restaurant restaurant) {

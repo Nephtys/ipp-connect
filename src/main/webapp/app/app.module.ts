@@ -7,6 +7,7 @@ import { Ng2Webstorage } from 'ng2-webstorage';
 
 import { JhipsterSharedModule, UserRouteAccessService } from './shared';
 import { JhipsterHomeModule } from './home/home.module';
+import { JhipsterAnswerModule } from './answer/answer.module';
 import { JhipsterAdminModule } from './admin/admin.module';
 import { JhipsterAccountModule } from './account/account.module';
 import { JhipsterEntityModule } from './entities/entity.module';
@@ -32,6 +33,7 @@ import {
         Ng2Webstorage.forRoot({ prefix: 'jhi', separator: '-'}),
         JhipsterSharedModule,
         JhipsterHomeModule,
+        JhipsterAnswerModule,
         JhipsterAdminModule,
         JhipsterAccountModule,
         JhipsterEntityModule

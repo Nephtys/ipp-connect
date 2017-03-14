@@ -43,6 +43,14 @@
             <column name="activated" type="boolean"/>
             <column name="created_date" type="timestamp"/>
         </loadData>
+
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/appointment.csv"
+                  separator=";"
+                  tableName="appointment">
+            <column name="activated" type="boolean"/>
+            <column name="created_date" type="timestamp"/>
+        </loadData>
         
     </changeSet>
 </databaseChangeLog>
